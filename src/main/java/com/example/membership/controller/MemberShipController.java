@@ -79,7 +79,7 @@ public class MemberShipController {
         }
 
 
-        return "board/list";
+        return "user/login";
 
     }
     

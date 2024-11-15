@@ -30,7 +30,7 @@ public class SecurityConfig {
                                 .requestMatchers("/user/login/**").permitAll()  //로그인페이지는 누구나 접속이 가능한 권한
                                 .requestMatchers("/board/register").authenticated()  //로그인 한 사람만 접속 가능
                                 .requestMatchers("/item/register").hasRole("ADMIN")  //사장님만 아이템 등록 가능
-                                .requestMatchers("/user/list").hasRole("ADMIN")  //사장님만 아이템 등록 가능
+                                .requestMatchers("/user/list").hasRole("ADMIN")  // 관리자만 유저리스트 확인 가능
                                 .anyRequest().permitAll()                           //이 외는 모두 허용
 //                                    .anyRequest().authenticated()                     //이 외에는 다 로그인해서 접속해
                 )
