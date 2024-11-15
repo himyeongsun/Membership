@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:if="${param.error}">
+      <h1>
+        email 또는 비밀번호를 확인해주세요
+      </h1>
+    </div>
+
+    <form action="/user/login" method="post">
+      이메일 : <input name="email" th:field="*{email}"><br>
+      <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"  class="fieldError"></p>
+
+      비밀번호 : <input name="password" th:field="*{password}" required minlength="10" maxlength="16"><br>
+      <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"  class="fieldError"></p>
+
+    </form>
+
+</body>
+</html>
