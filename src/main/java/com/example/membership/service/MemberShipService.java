@@ -68,7 +68,7 @@ public class MemberShipService implements UserDetailsService {
         // email로 검색해서 가져온 데이터가 null이 아니라면
         // 그 안에 있는 password를 가지고 비교해서 맞다면 로그인한다.
 
-        log.info("유저디테일서비스로 들어온 이메일 : "+email);    // 안들어왔다면 input창으로 넣은 값이 도달을 못한 것
+        log.info("UserDetailsService로 들어온 이메일 : "+email);    // 안들어왔다면 input창으로 넣은 값이 도달을 못한 것
         MemberShip memberShip =
         this.membershipRepository.findByEmail(email);
 

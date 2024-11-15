@@ -79,7 +79,9 @@ public class MemberShipController {
         }
 
 
-        return "user/login";
+        return "board/list";
 
     }
+    
+    // @PostMapping("/login") 시큐리티가 함
 }
